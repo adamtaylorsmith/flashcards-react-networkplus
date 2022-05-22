@@ -139,11 +139,6 @@ const FLASHCARDS = [
     answer: 'Internet Engineering Task Force - standards, services and protocols',
   },
   {
-    id: 1.25,
-    question: 'IEEE',
-    answer: 'Institute of Electrical and Electronics Engineers',
-  },
-  {
     id: 1.26,
     question: 'PSTN',
     answer: 'Public Switched Telephone Network. Facilitates SOHO internet access',
@@ -159,32 +154,162 @@ const FLASHCARDS = [
   },
   {
     id: 2.01,
+    question: 'Bandwidth',
+    answer: 'Electromagnetic carrier wave with a range of frequencies',
+  },
+  {
+    id: 2.02,
+    question: 'Copper Cable',
+    answer: 'Twisted pair and coaxial types. Attenuation. Twisted pair Cat cable standards',
+  },
+  {
+    id: 2.03,
+    question: 'Fiber Optic Cable',
+    answer: 'Single Mode (SMF) and Multimode (MMF) types. Optical Mode (OM) category designations',
+  },
+  {
+    id: 2.04,
     question: 'Attenuation',
     answer: 'Loss of signal strength over length. Usually refers to copper',
   },
   {
-    id: 2.02,
-    question: 'SMF / MMF',
-    answer: 'Single Mode. Multimode',
+    id: 2.05,
+    question: 'IEEE',
+    answer: 'Institute of Electrical and Electronics Engineers',
   },
   {
-    id: 2.03,
+    id: 2.06,
     question: 'xBASE-y',
-    answer: 'Ethernet media specifications using a three-part convention. 1) the bit rate in megabits per second, Mbps. 2) the signal mode, all mainstream types nowadays use baseband. 3) a designator for the media type e.g. cable type.',
+    answer: 'Ethernet media specifications using a three-part convention. 1) the bit rate in megabits (Mbps) or gigabits (Gbps) per second. 2) the signal mode, all mainstream types nowadays use baseband. 3) a designator for the media type (e.g. cable type)',
   },
   {
-    id: 2.04,
+    id: 2.07,
     question: '802.3',
-    answer: 'Ethernet standards',
+    answer: 'Ethernet standards written by the IEEE',
   },
+  {
+    id: 2.08,
+    question: 'CSMA/CD',
+    answer: 'Carrier Sense Multiple Access with Collision Detection. Detect collision on Tx and Rx simultaneously',
+  },
+  {
+    id: 2.09,
+    question: 'Half-Duplex / Full-Duplex',
+    answer: 'Half-duplex allows one-way traffic only. Full-duplex enables two-way traffic simultaneously',
+  },
+  {
+    id: 2.10,
+    question: '100BASE-TX Fast Ethernet',
+    answer: 'CSMA/CD, Cat 5 or better, Maximum length of 100 meters',
+  },
+  {
+    id: 2.11,
+    question: 'Gigabit Ethernet',
+    answer: 'Requires switches, supports 100 meters links over twisted-pair. Mainstream choice for office networks',
+  },
+  {
+    id: 2.12,
+    question: '10 Gbps & 40 Gbps',
+    answer: 'Requires shielded/screened cable for longer runs. Used in datacenters and workstations with high bandwidth requirements',
+  },
+  {
+    id: 2.13,
+    question: 'Unshielded Twisted Pair - UTP',
+    answer: 'Balanced pairs and twist rate to mitigate interference and crosstalk.',
+  },
+  {
+    id: 2.14,
+    question: 'Screened Cable',
+    answer: 'Outer foil shield around all pairs. Screened Twisted Pair (ScTP) / Foiled Unshielded Twisted Pair (F/UTP) / Foiled Twisted Pair (FTP)',
+  },
+  {
+    id: 2.15,
+    question: 'Shielded and Screened Cable',
+    answer: 'Outer braid around all pairs. Foil around each pair. Shielded foiled twisted pair (S/FTP)',
+  },
+  {
+    id: 2.16,
+    question: 'Cat 5',
+    answer: 'Legacy installations only',
+  },
+  {
+    id: 2.17,
+    question: 'Cat 5e',
+    answer: '1 Gbps over 100 m',
+  },
+  {
+    id: 2.18,
+    question: 'Cat 6',
+    answer: '10 Gbps over 55 m',
+  },
+  {
+    id: 2.19,
+    question: 'Cat 6A',
+    answer: '10 Gbps over 100 m',
+  },
+  {
+    id: 2.20,
+    question: 'Cat 7',
+    answer: 'Screened and shielded, uses special connectors',
+  },
+  {
+    id: 2.21,
+    question: 'Cat 8',
+    answer: '40 Gbps top-of-rack datacenter applications',
+  },
+  {
+    id: 2.22,
+    question: 'RJ-45',
+    answer: '4-pair cable used for ethernet',
+  },
+  {
+    id: 2.23,
+    question: 'RJ-11',
+    answer: '2-pair cable used for telephone',
+  },
+  {
+    id: 2.23,
+    question: 'RJ-45 EIA/TIA 568 A',
+    answer: 'Pin 1 Green/White, Pin 2 Green',
+  },
+  {
+    id: 2.24,
+    question: 'RJ-45 EIA/TIA 568 B',
+    answer: 'Pin 1 Orange/White, Pin 2 Orange',
+  },
+  {
+    id: 2.25,
+    question: 'Plenum-rated',
+    answer: 'For HVAC systems. Emits minimal smoke and self-extinguishing',
+  },
+  {
+    id: 2.26,
+    question: 'Riser-rated',
+    answer: 'For between two floors',
+  },
+  {
+    id: 2.27,
+    question: 'Coaxial Connector',
+    answer: 'Core and mesh conductors. Used for cable broadband. F-type connectors',
+  },
+  {
+    id: 2.28,
+    question: 'Twinaxial Connector',
+    answer: 'Two core conductors plus mesh. Used in datacenters. Direct attach copper (DAC) transceivers',
+  },
+
+
+
   {
     id: 3.00,
     question: 'LESSON 3 - Ethernet Switching',
   },
+  
   {
     id: 4.00,
     question: 'LESSON 4 - Troubleshooting Ethernet Networks',
   },
+
   {
     id: 5.00,
     question: 'LESSON 5 - IPv4 Addressing',
@@ -194,6 +319,8 @@ const FLASHCARDS = [
     question: 'ARP',
     answer: 'Address Resolution Protocol. Determines which MAC is associated with which IP. Windows utility: arp -a; Linux: ip neigh',
   },
+
+
   {
     id: 6.00,
     question: 'LESSON 6 - Supporting IPv4 and IPv6 Networks',
@@ -338,14 +465,20 @@ const FLASHCARDS = [
     question: '::1/128',
     answer: 'Loopback',
   },
+
+
+
   {
     id: 7.00,
     question: 'LESSON 7 - Configuring and Troubleshooting Routers',
   },
+
   {
     id: 8.00,
     question: 'LESSON 8 - Network Topologies and Types',
   },
+
+
   {
     id: 9.00,
     question: 'LESSON 9 - Transport Layer Protocols',
@@ -565,6 +698,8 @@ const FLASHCARDS = [
     question: 'Protocol Analyzers',
     answer: '',
   },
+
+
   {
     id: 10.00,
     question: 'LESSON 10 - More Transport Layer Protocols',
