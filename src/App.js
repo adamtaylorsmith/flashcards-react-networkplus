@@ -5,9 +5,35 @@ import './app.css'
 function App() {
 
   const [flashcards, setFlashcards] = useState(FLASHCARDS)
+  const [lesson, setLesson] = useState(0)
 
   return (
     <>
+
+      <form>
+      <label className='lessonLabel'>Choose a lesson:</label><br/>
+        <select className='lessonInput'>
+          <option>-</option>
+          <option value="1">Lesson 1 - OSI Model</option>
+          <option value="2">Lesson 2 - Ethernet Cabling</option>
+          <option value="3">Lesson 3 - Ethernet Switching</option>
+          <option value="4">Lesson 4 - Troubleshooting Ethernet Networks</option>
+          <option value="5">Lesson 5 - IPv4 Addressing</option>
+          <option value="6">Lesson 6 - IPv4 and IPv6 Networks</option>
+          <option value="7">Lesson 7 - Routers</option>
+          <option value="8">Lesson 8 - Network Topologies</option>
+          <option value="9">Lesson 9 - Transport Layer</option>
+          <option value="10">Lesson 10 - Transport Layer Part 2</option>
+          <option value="11">Lesson 11 - Network Applications</option>
+        </select>
+      </form>
+      
+      {/* {
+        lesson !== 0 ?
+        <div>Hooray!</div> :
+        <div>Please choose your lesson to review.</div>
+      } */}
+
       <FlashcardList flashcards={flashcards} />
     </>
   );
@@ -464,6 +490,8 @@ const FLASHCARDS = [
     question: 'PoE 802.3bt',
     answer: 'Ultra Power Over Ethernet',
   },
+
+
   {
     id: 4.00,
     question: 'LESSON 4 - Troubleshooting Ethernet Networks',
@@ -482,6 +510,11 @@ const FLASHCARDS = [
     id: 5.01,
     question: 'ARP',
     answer: 'Address Resolution Protocol. Determines which MAC is associated with which IP. Windows utility: arp -a; Linux: ip neigh',
+  },
+  {
+    id: 5.02,
+    question: '', 
+    answer: '',
   },
 
 
@@ -636,10 +669,20 @@ const FLASHCARDS = [
     id: 7.00,
     question: 'LESSON 7 - Configuring and Troubleshooting Routers',
   },
+  {
+    id: 7.01,
+    question: '', 
+    answer: '',
+  },
 
   {
     id: 8.00,
     question: 'LESSON 8 - Network Topologies and Types',
+  },
+  {
+    id: 8.01,
+    question: '', 
+    answer: '',
   },
 
 
