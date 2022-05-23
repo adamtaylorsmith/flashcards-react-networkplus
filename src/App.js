@@ -304,10 +304,174 @@ const FLASHCARDS = [
     id: 3.00,
     question: 'LESSON 3 - Ethernet Switching',
   },
-  
+  {
+    id: 3.01,
+    question: 'Repeater',
+    answer: 'To overcome distance limitations. Works at layer 1. Copper and fiber optic',
+  },
+  {
+    id: 3.02,
+    question: 'Media Converter',
+    answer: 'Transitions between media types. Works at layer 1. Fiber to copper. Single mode to multimode',
+  },
+  {
+    id: 3.03,
+    question: 'Hub',
+    answer: 'Legacy intermediate system for ethernet. Works at layer 1. All ports in the same collision domain',
+  },
+  {
+    id: 3.04,
+    question: 'Bridges',
+    answer: 'Works at layer 2. Ports in separate collision domains. Ports in same broadcast domain. Tracks MAC addresses',
+  },
+  {
+    id: 3.05,
+    question: 'Switches at Layer 2',
+    answer: 'Replaces hub and bridges and eliminates performance drag. Each port a separate collision domain. Allows full-duplex. All ports in same broadcast domain unless VLANs have been configured. Uses MAC addresses',
+  },
+  {
+    id: 3.06,
+    question: 'Network Interface Cards - NIC',
+    answer: 'Transceiver component works at layer 1. Card logic and driver work at layer 2. Copper or fiber optic. MAC address / Ethernet address (EA) / Extended unique identifier (EUI)',
+  },
+  {
+    id: 3.07,
+    question: 'Ethernet Frame',
+    answer: 'Preamble / SFD / Destination MAC / Source MAC / Ether type / Payload / FCS',
+  },
+  {
+    id: 3.08,
+    question: 'MAC Address Format',
+    answer: '48 bit ID in hex notation (e.g. 00:60:8c:3a:bc). Burned-in IEEE address according to manufacturer. Broadcast address = ff:ff:ff:ff:ff:ff',
+  },
+  {
+    id: 3.09,
+    question: 'MTU',
+    answer: 'Maximum Transmission Unit. normally up to 1500-byte payload. 64 bytes minimum, if not 64 bytes padded with redundant data. Including headers max size 1518 bytes (or jumbo frames)',
+  },
+  {
+    id: 3.10,
+    question: 'Packet Sniffer',
+    answer: 'Protocol analyzer decodes frames, headers and data',
+  },
+  {
+    id: 3.11,
+    question: 'SPAN',
+    answer: 'Switched Port Analyzer',
+  },
+  {
+    id: 3.12,
+    question: 'TAP',
+    answer: 'Test Access Point. Passive or active',
+  },
+  {
+    id: 3.13,
+    question: 'tcpdump',
+    answer: '',
+  },
+  {
+    id: 3.14,
+    question: 'Wireshark',
+    answer: 'GUI packet capture and analysis utility',
+  },
+  {
+    id: 3.15,
+    question: 'Unmanaged Switch',
+    answer: 'Standalone and run without any configuration',
+  },
+  {
+    id: 3.16,
+    question: 'Stackable Switch',
+    answer: 'Can be connected together and operate as a group',
+  },
+  {
+    id: 3.17,
+    question: 'Modular Switch',
+    answer: 'Can be configured with different numbers and ports. Includes slots for plug-in cards',
+  },
+  {
+    id: 3.18,
+    question: 'Fixed Switch',
+    answer: 'Set number of ports and cannot be changed',
+  },
+  {
+    id: 3.19,
+    question: 'Switch - User EXEC',
+    answer: 'Read-only mode. Report configuration, show system status, run basic troubleshooting',
+  },
+  {
+    id: 3.20,
+    question: 'Switch - Privileged EXEC',
+    answer: 'Allows user to reboot, shut down, backup, restore',
+  },
+  {
+    id: 3.21,
+    question: 'Switch - Configuration Mode',
+    answer: 'Allows user to write configuration updates',
+  },
+  {
+    id: 3.22,
+    question: 'Auto MDI/MDI-X',
+    answer: 'Media dependant interface (MDI). Transmits on pins 1 and 2, recieves on pins 3 and 6. Senses configuration regardless of cable',
+  },
+  {
+    id: 3.23,
+    question: 'MAC Address Table',
+    answer: 'Database of MAC addresses associated with each port. Switch flood frames when destination MAC is unknown',
+  },
+  {
+    id: 3.24,
+    question: 'Port Security',
+    answer: 'Specify static list of allowed MACs. Accept giver number of sticky MACs. Specify enforcement action for policy violation',
+  },
+  {
+    id: 3.25,
+    question: 'Port Aggregation / NIC Teaming',
+    answer: 'Combine multiple cabled links into a single logical channel. Aggregates link bandwidth. Provides redundancy',
+  },
+  {
+    id: 3.26,
+    question: 'LACP',
+    answer: 'Link Aggregation Control Protocol. Auto negotiates the bonded link between switch ports and end system, detects configuration errors, recovers from the failure of a physical link',
+  },
+  {
+    id: 3.27,
+    question: 'Port Mirroring',
+    answer: 'Configure switch to copy unicast frames for legitimate packet sniffing and network analysis. Switched port analyzer (SPAN). Attach sniffer/monitor to destination port',
+  },
+  {
+    id: 3.28,
+    question: 'Jumbo Frames',
+    answer: 'MTU as high as 9000 bytes. Ofter used in storage area networks',
+  },
+  {
+    id: 3.29,
+    question: 'Flow Control',
+    answer: 'Allows server to pause traffic',
+  },
+  {
+    id: 3.30,
+    question: 'PoE 802.3af',
+    answer: 'Power Over Ethernet',
+  },
+  {
+    id: 3.31,
+    question: 'PoE 802.3at',
+    answer: 'Power Over Ethernet plus (PoE+)',
+  },
+  {
+    id: 3.32,
+    question: 'PoE 802.3bt',
+    answer: 'Ultra Power Over Ethernet',
+  },
   {
     id: 4.00,
     question: 'LESSON 4 - Troubleshooting Ethernet Networks',
+  },
+  {
+    id: 4.01,
+    question: '', 
+    answer: '',
   },
 
   {
