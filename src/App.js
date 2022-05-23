@@ -1,45 +1,69 @@
 import React, { useState } from 'react';
-import FlashcardList from './FlashcardList';
+// import FlashcardList from './FlashcardList';
 import './app.css'
+import LessonOne from './components/LessonOne'
+import LessonTwo from './components/LessonTwo'
+import LessonThree from './components/LessonThree'
+import LessonFour from './components/LessonFive'
+import LessonFive from './components/LessonSix'
+import LessonSix from './components/LessonSix'
+import LessonSeven from './components/LessonSeven'
+import LessonEight from './components/LessonEight'
+import LessonNine from './components/LessonNine'
+import LessonTen from './components/LessonTen'
+import LessonEleven from './components/LessonEleven'
 
 function App() {
 
-  const [flashcards, setFlashcards] = useState(FLASHCARDS)
-  const [lesson, setLesson] = useState(0)
+  const [flashcards, setFlashcards] = useState('')
+  // const [lesson, setLesson] = useState(0)
+
+  const myComponents = {
+    'one': <LessonOne flashcards={one} />,
+    'two': <LessonTwo flashcards={two} />,
+    'three': <LessonThree flashcards={three} />,
+    'four': <LessonFour flashcards={four} />,
+    'five': <LessonFive flashcards={five} />,
+    'six': <LessonSix flashcards={six} />,
+    'seven': <LessonSeven flashcards={seven} />,
+    'eight': <LessonEight flashcards={eight} />,
+    'nine': <LessonNine flashcards={nine} />,
+    'ten': <LessonTen flashcards={ten} />,
+    'eleven': <LessonEleven flashcards={eleven} />,
+  }
 
   return (
     <>
 
-      <form>
-      <label className='lessonLabel'>Choose a lesson:</label><br/>
-        <select className='lessonInput'>
-          <option>-</option>
-          <option value="1">Lesson 1 - OSI Model</option>
-          <option value="2">Lesson 2 - Ethernet Cabling</option>
-          <option value="3">Lesson 3 - Ethernet Switching</option>
-          <option value="4">Lesson 4 - Troubleshooting Ethernet Networks</option>
-          <option value="5">Lesson 5 - IPv4 Addressing</option>
-          <option value="6">Lesson 6 - IPv4 and IPv6 Networks</option>
-          <option value="7">Lesson 7 - Routers</option>
-          <option value="8">Lesson 8 - Network Topologies</option>
-          <option value="9">Lesson 9 - Transport Layer</option>
-          <option value="10">Lesson 10 - Transport Layer Part 2</option>
-          <option value="11">Lesson 11 - Network Applications</option>
+      <div className='text-3xl font-bold flex justify-center mt-4'>
+        CompTIA Network+ 008
+      </div>
+      <form className='flex justify-center my-6'>
+        <select className='lessonInput' onChange={(e) => setFlashcards(e.target.value)}>
+          <option>Select Lesson</option>
+          <option value="one">Lesson 1 - OSI Model</option>
+          <option value="two">Lesson 2 - Ethernet Cabling</option>
+          <option value="three">Lesson 3 - Ethernet Switching</option>
+          <option value="four">Lesson 4 - Troubleshooting Ethernet Networks</option>
+          <option value="five">Lesson 5 - IPv4 Addressing</option>
+          <option value="six">Lesson 6 - IPv4 and IPv6 Networks</option>
+          <option value="seven">Lesson 7 - Routers</option>
+          <option value="eight">Lesson 8 - Network Topologies</option>
+          <option value="nine">Lesson 9 - Transport Layer</option>
+          <option value="ten">Lesson 10 - Transport Layer Part 2</option>
+          <option value="eleven">Lesson 11 - Network Applications</option>
         </select>
       </form>
-      
-      {/* {
-        lesson !== 0 ?
-        <div>Hooray!</div> :
-        <div>Please choose your lesson to review.</div>
-      } */}
+      <hr/>
 
-      <FlashcardList flashcards={flashcards} />
+      {/* <FlashcardList flashcards={flashcards} /> */}
+
+      {myComponents[flashcards]}
     </>
   );
 }
 
-const FLASHCARDS = [
+const one = [
   {
     id: 1.00,
     question: 'LESSON 1 - OSI Model',
@@ -174,6 +198,8 @@ const FLASHCARDS = [
     question: 'Hexadecimal',
     answer: 'Base 16 numbering system. 0-9 & A-F. A=10, B=11, C=12, D=13, E=14, F=15, FF=255',
   },
+]
+const two = [
   {
     id: 2.00,
     question: 'LESSON 2 - Ethernet Cabling',
@@ -323,9 +349,8 @@ const FLASHCARDS = [
     question: 'Twinaxial Connector',
     answer: 'Two core conductors plus mesh. Used in datacenters. Direct attach copper (DAC) transceivers',
   },
-
-
-
+]
+const three = [
   {
     id: 3.00,
     question: 'LESSON 3 - Ethernet Switching',
@@ -490,8 +515,8 @@ const FLASHCARDS = [
     question: 'PoE 802.3bt',
     answer: 'Ultra Power Over Ethernet',
   },
-
-
+]
+const four = [
   {
     id: 4.00,
     question: 'LESSON 4 - Troubleshooting Ethernet Networks',
@@ -501,7 +526,8 @@ const FLASHCARDS = [
     question: '', 
     answer: '',
   },
-
+]
+const five = [
   {
     id: 5.00,
     question: 'LESSON 5 - IPv4 Addressing',
@@ -516,8 +542,8 @@ const FLASHCARDS = [
     question: '', 
     answer: '',
   },
-
-
+]
+const six = [
   {
     id: 6.00,
     question: 'LESSON 6 - Supporting IPv4 and IPv6 Networks',
@@ -662,9 +688,8 @@ const FLASHCARDS = [
     question: '::1/128',
     answer: 'Loopback',
   },
-
-
-
+]
+const seven = [
   {
     id: 7.00,
     question: 'LESSON 7 - Configuring and Troubleshooting Routers',
@@ -674,7 +699,8 @@ const FLASHCARDS = [
     question: '', 
     answer: '',
   },
-
+]
+const eight = [
   {
     id: 8.00,
     question: 'LESSON 8 - Network Topologies and Types',
@@ -684,8 +710,8 @@ const FLASHCARDS = [
     question: '', 
     answer: '',
   },
-
-
+]
+const nine = [
   {
     id: 9.00,
     question: 'LESSON 9 - Transport Layer Protocols',
@@ -905,12 +931,14 @@ const FLASHCARDS = [
     question: 'Protocol Analyzers',
     answer: '',
   },
-
-
+]
+const ten = [
   {
     id: 10.00,
     question: 'LESSON 10 - More Transport Layer Protocols',
   },
+]
+const eleven = [
   {
     id: 11.00,
     question: 'LESSON 11 - Network Applications',
