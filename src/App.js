@@ -40,7 +40,7 @@ function App() {
       </div>
       <form className='flex justify-center my-6'>
         <select className='lessonInput' onChange={(e) => setFlashcards(e.target.value)}>
-          <option>Select Lesson</option>
+          <option>Select Lesson to Review</option>
           <option value="one">Lesson 1 - OSI Model</option>
           <option value="two">Lesson 2 - Ethernet Cabling</option>
           <option value="three">Lesson 3 - Ethernet Switching</option>
@@ -696,8 +696,113 @@ const seven = [
   },
   {
     id: 7.01,
-    question: '', 
-    answer: '',
+    question: 'Routing Table Categories', 
+    answer: 'Directly connected / paths to remote networks / host routes / default route (0.0.0.0/0 or ::/0)',
+  },
+  {
+    id: 7.02,
+    question: 'Packet Forwarding', 
+    answer: 'Encapsulation for interface data link protocol. Hop count / TTL',
+  },
+  {
+    id: 7.03,
+    question: 'Fragmentation', 
+    answer: 'IP is unreliable, connectionless delivery. Packets might be lost, out of sequence, delayed',
+  },
+  {
+    id: 7.04,
+    question: 'Convergence', 
+    answer: 'All routers agree on network topology',
+  },
+  {
+    id: 7.05,
+    question: 'IGP', 
+    answer: 'Interior Gateway Protocol. Routing within an autonomous system',
+  },
+  {
+    id: 7.06,
+    question: 'EGP', 
+    answer: 'Exterior Gateway Protocol. Routing between autonomous systems',
+  },
+  {
+    id: 7.07,
+    question: 'RIP', 
+    answer: 'Routing Information Protocol. Distance vector. Slow convergence and inefficient updates. Max hop count 15. Classful',
+  },
+  {
+    id: 7.08,
+    question: 'RIPv2', 
+    answer: 'Classless and uses more efficient multicasts',
+  },
+  {
+    id: 7.09,
+    question: 'RIPng', 
+    answer: 'IPv6 support',
+  },
+  {
+    id: 7.10,
+    question: 'EIGRP', 
+    answer: 'Enhanced Interior Gateway Routing Protocol. Classless addressing. Advanced distance vector. Best convergence performance. Runs over IP directly (protocol #88) using multicasts',
+  },
+  {
+    id: 7.11,
+    question: 'OSPF', 
+    answer: 'Open Shortest Path First. Link state suited to complex private networks. Classless. Runs over IP directly (protocol #89) using multicasts',
+  },
+  {
+    id: 7.12,
+    question: 'BGP', 
+    answer: 'Border Gateway Protocol. Hybrid or path vector. EGP. Supports routing on internet. Supports classless addressing. Runs over TCP port 179',
+  },
+  {
+    id: 7.13,
+    question: 'Administrative Distance', 
+    answer: 'Longer prefixes preferred. Determines least-cost path using metrics',
+  },
+  {
+    id: 7.14,
+    question: 'VLSM', 
+    answer: 'Variable Length Subnet Masks. Uses address space in IPv4 network more efficiently. Uses different mask lengths according to host numbers per subnet',
+  },
+  {
+    id: 7.15,
+    question: 'Edge Router', 
+    answer: 'Hosts in different IP networks must be separated by router. Edge routers on network perimeter. Customer edge (CE) to provider edge (PE)',
+  },
+  {
+    id: 7.16,
+    question: 'Layer 3 Switch', 
+    answer: 'Optimized to forward between VLANs',
+  },
+  {
+    id: 7.17,
+    question: 'Route command', 
+    answer: 'Troubleshoot windows and linux hosts. Verify default gateway. Add static route',
+  },
+  {
+    id: 7.18,
+    question: 'traceroute and tracert', 
+    answer: 'UDP probes to identify each hop in a path. Increments TTL. Outputs hops, IP address of interface, time taken in milliseconds. tracert is for Windows',
+  },
+  {
+    id: 7.19,
+    question: 'Missing Route', 
+    answer: 'Use ping and traceroute to identify where network path fails. Check routing table. Review device configuration',
+  },
+  {
+    id: 7.20,
+    question: 'Routing Loop Issue', 
+    answer: 'Incorrect path info cause packet to circulate until TTL is exhausted. Use traceroute to diagnose',
+  },
+  {
+    id: 7.21,
+    question: 'Asymmetrical Routing Issue', 
+    answer: 'Return path different than forward path. Inconsistent latency or security appliances drop return packets. Analyze traceroute and investigate routing tables',
+  },
+  {
+    id: 7.22,
+    question: 'Low Optical Link Budget Issue', 
+    answer: 'Consider physical / data link layers. Poor connectivity across fiber link. Loss budget expresses loss from attenuation, connectors, splices. Loss budget must be less than power budget',
   },
 ]
 const eight = [
@@ -707,8 +812,143 @@ const eight = [
   },
   {
     id: 8.01,
-    question: '', 
-    answer: '',
+    question: 'Client-Server', 
+    answer: 'Machines are dedicated to a client role or a servers role. Centralized administration',
+  },
+  {
+    id: 8.02,
+    question: 'Peer-to-Peer', 
+    answer: 'Machines can be configured in both client and server roles. Administration is decentralized',
+  },
+  {
+    id: 8.03,
+    question: 'Home / Residential Network', 
+    answer: 'Comprised of a router and a few computers, mobile devices, gaming consoles, printers',
+  },
+  {
+    id: 8.04,
+    question: 'SOHO', 
+    answer: 'Business-oriented network often using a single internet access point to provide connectivity',
+  },
+  {
+    id: 8.05,
+    question: 'SME', 
+    answer: 'Small and Medium Sized Enterprise network supporting dozens of users',
+  },
+  {
+    id: 8.06,
+    question: 'Enterprise LAN', 
+    answer: 'Large network with hundreds or thousands of servers and clients',
+  },
+  {
+    id: 8.07,
+    question: 'CAN', 
+    answer: 'Campus Area Network. A LAN that spans multiple nearby buildings',
+  },
+  {
+    id: 8.08,
+    question: 'Data Center', 
+    answer: 'A network that hosts only servers and storage, and no end user client devices',
+  },
+  {
+    id: 8.09,
+    question: 'MAN', 
+    answer: 'Metropolitan Area Network. Cities',
+  },
+  {
+    id: 8.10,
+    question: 'WAN', 
+    answer: 'A network of networks connected by long distance links',
+  },
+  {
+    id: 8.11,
+    question: 'Physical Topology', 
+    answer: 'The placement of nodes and the media links between them',
+  },
+  {
+    id: 8.12,
+    question: 'Logical Topology', 
+    answer: 'Describes the flow of data',
+  },
+  {
+    id: 8.13,
+    question: 'Star Topology', 
+    answer: 'Each node is connected to a concentrator over dedicated network media',
+  },
+  {
+    id: 8.14,
+    question: 'Mesh Topology', 
+    answer: 'Each node has a point-to-point link with every other node. The number of links is calculated using N*(N-1)/2. Partial mesh networks are preferred',
+  },
+  {
+    id: 8.15,
+    question: 'Ring Topology', 
+    answer: 'Each node is connected to its neighbor in a closed loop. Signals are forwarded in one direction only',
+  },
+  {
+    id: 8.16,
+    question: 'Bus Topology', 
+    answer: 'Each node connects to a shared medium, such as a trunk. Terminators located at each end',
+  },
+  {
+    id: 8.17,
+    question: 'Hybrid Topology', 
+    answer: 'Different logical and physical topologies. E.g. hierarchical star, hierarchical star-mesh, star of stars, star with ring',
+  },
+  {
+    id: 8.18,
+    question: 'Three-tiered Network Hierarchy', 
+    answer: 'Access/edge Layer (workgroup switches connect end systems). Distribution/aggregation layer (fault tolerant links). Core layer (network backbone)',
+  },
+  {
+    id: 8.19,
+    question: 'Spanning Tree Protocol', 
+    answer: 'Prevents switching loops. Designates a single path from any device to the root bridge',
+  },
+  {
+    id: 8.20,
+    question: 'BPDU', 
+    answer: 'Bridge Protocol Data Unit. STP info is packaged as BPDU multicast frames. Exchanged by devices to determine topology',
+  },
+  {
+    id: 8.21,
+    question: '802.1w', 
+    answer: 'Rapid STP reduces outages',
+  },
+  {
+    id: 8.22,
+    question: 'Switching Loop', 
+    answer: 'Can be catastrophic as there is no TTL to expire a frame',
+  },
+  {
+    id: 8.23,
+    question: 'Broadcast Storm', 
+    answer: 'Occur when switches keep receiving and re-broadcasting continually. Often, cause is when two ports bridged with mismatched patch cord',
+  },
+  {
+    id: 8.24,
+    question: 'VLAN', 
+    answer: 'Breaks up broadcast domains. Filter traffic between VLAN segments using access control lists (ACLs). Static or dynamic assignment',
+  },
+  {
+    id: 8.25,
+    question: '802.1q', 
+    answer: 'Trunking. Switches interconnected vis trunk links. VLAN information is transported',
+  },
+  {
+    id: 8.26,
+    question: 'Untagged ports', 
+    answer: 'Host or access ports. The switch assigns tags, not end systems',
+  },
+  {
+    id: 8.27,
+    question: 'Tagged ports', 
+    answer: 'Typically trunk link, also used by virtualization hosts',
+  },
+  {
+    id: 8.28,
+    question: 'Voice VLAN', 
+    answer: 'VoIP bandwidth and latency requirements. Voice VLAN allows VoIP handset to share physical port. Switch assigns PC data to one VLAN and VoIP to another',
   },
 ]
 const nine = [
