@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import FlashcardList from './FlashcardList';
 import './app.css'
 import LessonOne from './components/LessonOne'
 import LessonTwo from './components/LessonTwo'
@@ -16,7 +15,6 @@ import LessonEleven from './components/LessonEleven'
 function App() {
 
   const [flashcards, setFlashcards] = useState('')
-  // const [lesson, setLesson] = useState(0)
 
   const myComponents = {
     'one': <LessonOne flashcards={one} />,
@@ -34,12 +32,11 @@ function App() {
 
   return (
     <>
-
       <div className='text-3xl font-bold flex justify-center mt-4'>
         CompTIA Network+ 008
       </div>
       <form className='flex justify-center my-6'>
-        <select className='lessonInput' onChange={(e) => setFlashcards(e.target.value)}>
+        <select className='text-lg' onChange={(e) => setFlashcards(e.target.value)}>
           <option>Select Lesson to Review</option>
           <option value="one">Lesson 1 - OSI Model</option>
           <option value="two">Lesson 2 - Ethernet Cabling</option>
@@ -55,9 +52,6 @@ function App() {
         </select>
       </form>
       <hr/>
-
-      {/* <FlashcardList flashcards={flashcards} /> */}
-
       {myComponents[flashcards]}
     </>
   );
@@ -523,8 +517,173 @@ const four = [
   },
   {
     id: 4.01,
-    question: '', 
-    answer: '',
+    question: '7 Step Network Troubleshooting Methodology', 
+    answer: '1. Identify problem / 2. Establish theory / 3. Test theory / 4. Establish plan of action / 5. Implement solution / 6. Verify functionality / 7. Document findings',
+  },
+  {
+    id: 4.02,
+    question: 'Identify the Problem', 
+    answer: 'Gather information: Identify scope and prioritization, analyze logs, verify with other technicians. Identify symptoms and duplicate problem, Approach multiple problems individually',
+  },
+  {
+    id: 4.03,
+    question: 'Question Users', 
+    answer: 'Question the user with open and closed questions. Determine if anything has changed',
+  },
+  {
+    id: 4.04,
+    question: 'Establish a Theory of Probable Cause', 
+    answer: 'Establish a theory from known symptoms: question the obvious, prove functionality systematically. OSI Model approach: layer by layer, top-to-bottom, bottom-to-top, divide and conquer',
+  },
+  {
+    id: 4.05,
+    question: 'Test the Theory to Determine Cause', 
+    answer: 'Isolate the problem to a single component or system. Run tests to prove theory. Escalate if necessary: problem too difficult, warranty or supplier issue, scope too large, customer issues',
+  },
+  {
+    id: 4.06,
+    question: 'Establish a Plan of Action', 
+    answer: 'Repair, replace, ignore. Plan changes carefully and try to anticipate effects',
+  },
+  {
+    id: 4.07,
+    question: 'Implement the Solution', 
+    answer: 'Change management and authorization, is escalation required? Notification and scheduling. Change control',
+  },
+  {
+    id: 4.08,
+    question: 'Verify Full System Functionality', 
+    answer: 'Consider impact on overall system functionality. Test that the problem is fixed and that the system functions normally. Identify preventive measures that will prevent from reoccurring',
+  },
+  {
+    id: 4.09,
+    question: 'Document Findings, Actions, Outcomes', 
+    answer: 'Ticket system is available. Categorize problems and identify trends. Add known issues to knowledge base. Complete all notes professionally',
+  },
+  {
+    id: 4.10,
+    question: 'Baud Rate', 
+    answer: 'Measures symbol rate in hertz',
+  },
+  {
+    id: 4.11,
+    question: 'Throughput', 
+    answer: 'Rate at which ALL data and messages arrive at their destination',
+  },
+  {
+    id: 4.12,
+    question: 'Goodput', 
+    answer: 'Rate at which USEFUL data and messages arrive at their destination',
+  },
+  {
+    id: 4.13,
+    question: 'SNR', 
+    answer: 'Signal to noise ratio',
+  },
+  {
+    id: 4.14,
+    question: 'Cable Issues', 
+    answer: 'End system transceiver > patch cord. Permanent link wall port > patch panel. Patch cord > intermediate system port. Test each component, use known good patch cords, use port tester and cabling test tools',
+  },
+  {
+    id: 4.15,
+    question: 'Loopback', 
+    answer: 'Test port by transmitting to itself',
+  },
+  {
+    id: 4.16,
+    question: 'Status Indicator', 
+    answer: 'LEDs on NIC and switch port. Solid green: connected but no activity. Blinking green: connected and active. Blinking amber: continuous blinking indicates a problem (usually collisions). No LED: no detectable link',
+  },
+  {
+    id: 4.17,
+    question: 'Cable Tester', 
+    answer: 'Verify cable category is appropriate for application. Consider screened / shielded categories. Use test to report detailed characteristics',
+  },
+  {
+    id: 4.18,
+    question: 'TDR', 
+    answer: 'Time domain reflectometer. Measures length and locates installation problems or faults',
+  },
+  {
+    id: 4.19,
+    question: 'Wire Map Tester', 
+    answer: 'Check pinouts are correctly wired. Opens, shorts, reversed, crossed, split pairs',
+  },
+  {
+    id: 4.20,
+    question: 'Tone Generator (Fox and Hound)', 
+    answer: 'Trace cable path and identify cable within a bundle',
+  },
+  {
+    id: 4.21,
+    question: 'Issue - Reduced link speed, errors and retransmissions', 
+    answer: 'Measure using cable certifier and compare tolerance for cable category',
+  },
+  {
+    id: 4.22,
+    question: 'Issue - Signal is too weak at destination', 
+    answer: 'Ratio of input to output using logarithms. Absolute value (smaller better) versus margin (larger better)',
+  },
+  {
+    id: 4.23,
+    question: 'Issue - Interference', 
+    answer: 'Cable placement and electromagnetic interference. Alien crosstalk',
+  },
+  {
+    id: 4.24,
+    question: 'Issue - Crosstalk general', 
+    answer: 'Interference within cable due to faulty wiring or termination',
+  },
+  {
+    id: 4.25,
+    question: 'Crosstalk - Near End (NEXT)', 
+    answer: 'Check termination',
+  },
+  {
+    id: 4.26,
+    question: 'Crosstalk - Attenuation to Crosstalk Ratio (ACRN)', 
+    answer: 'Check link distance, cable quality and faults, external interference',
+  },
+  {
+    id: 4.27,
+    question: 'Crosstalk - Attenuation to Crosstalk Ratio, Far End (ACRF)', 
+    answer: 'Check cable quality and faults',
+  },
+  {
+    id: 4.28,
+    question: 'Crosstalk - Power Sum', 
+    answer: 'Check cable suitability for gigabit ethernet and higher',
+  },
+  {
+    id: 4.29,
+    question: 'Cable Application Issue - Straight Through', 
+    answer: 'Terminated T568A at both ends or T568B at both ends. Used for an uplink (MDI port to MDI-X port)',
+  },
+  {
+    id: 4.30,
+    question: 'Cable Application Issue - Crossover', 
+    answer: 'Terminated T568A at both ends or T568B at both ends. Host to host or hub to hub. Auto MDI/MDI-X supported',
+  },
+  {
+    id: 4.31,
+    question: 'Cable Application Issue - Rollover / Console', 
+    answer: 'Used to connect to serial interface of switches and routers',
+  },
+  {
+    id: 4.32,
+    question: 'Cable Application Issue - Power Over Ethernet', 
+    answer: 'Cable must be sufficient quality',
+  },
+  {
+    id: 4.33,
+    question: 'Fiber Optic Cable Testing', 
+    answer: 'Test length using optical power meter. Identify faults using a OTDR. Ensure clean environment when splicing / terminating. Match transceiver wavelength and type at ends',
+  },
+  {
+    id: 4.34,
+    question: 'OTDR', 
+    answer: 'Optical Time Domain Reflectometer',
   },
 ]
 const five = [
@@ -539,8 +698,143 @@ const five = [
   },
   {
     id: 5.02,
-    question: '', 
+    question: 'TCP', 
+    answer: 'Transmission Control Protocol',
+  },
+  {
+    id: 5.03,
+    question: 'UDP', 
+    answer: 'User Datagram Protocol',
+  },
+  {
+    id: 5.04,
+    question: 'ICMP/1', 
+    answer: 'Internet Control Message Protocol. Status messaging and connectivity testing',
+  },
+  {
+    id: 5.05,
+    question: 'IGMP/2', 
+    answer: 'Internet Group Messaging Protocol. Multicasting',
+  },
+  {
+    id: 5.06,
+    question: 'GRE/47',
+    answer: 'To tunnel packets across an intermediate network',
+  },
+  {
+    id: 5.07,
+    question: 'ESP/50 and AH/51', 
+    answer: 'An encrypted form of IP',
+  },
+  {
+    id: 5.08,
+    question: 'EIGRP/88 and OSPF/89', 
+    answer: 'Used by routers to exchange information about paths to remote networks',
+  },
+  {
+    id: 5.09,
+    question: 'IPv4 Format', 
+    answer: 'Encodes a Network ID and Host ID. 32 bit. Divided into four octets usually decimal notation (e.g. 198.51.100.1). Range of values from 0.0.0.0 to 255.255.255.255',
+  },
+  {
+    id: 5.10,
+    question: 'Network Masks', 
+    answer: 'Accompanies IP address to reveal Network ID part. Dotted decimal or slash notation',
+  },
+  {
+    id: 5.11,
+    question: 'Subnet Masks',
+    answer: 'Divides an IP network into multiple IP subnets. Designates some host bits as subnet ID bits. Only used within the IP network',
+  },
+  {
+    id: 5.12,
+    question: 'Forwarding at Layer 2', 
+    answer: 'Switching',
+  },
+  {
+    id: 5.13,
+    question: 'Forwarding at Layer 3', 
+    answer: 'Routing',
+  },
+  {
+    id: 5.14,
+    question: 'Default Gateway', 
+    answer: 'Router',
+  },
+  {
+    id: 5.15,
+    question: 'Unicast', 
+    answer: 'Packet directed to a single destination IP',
+  },
+  {
+    id: 5.16,
+    question: 'Multicast',
+    answer: 'Packet directed to all interfaces in the local IP network. Hosts join a multicast group. IGMP. Delivery at layer 2',
+  },
+  {
+    id: 5.17,
+    question: 'Anycast', 
+    answer: 'Group of hosts configured with same IP address. Router forwards to only one node. Used for load balancing and service failover',
+  },
+  {
+    id: 5.18,
+    question: 'Broadcast - performance', 
+    answer: 'Limit number of hosts within broadcast domain to improve performance. Configure VLANs on switches to map layer 3 broadcast to layer 2',
+  },
+  {
+    id: 5.19,
+    question: 'Segmentation - performance', 
+    answer: 'Enforce security zones and boundaries. Isolate physical and data link layer segments that se different technologies',
+  },
+  {
+    id: 5.20,
+    question: 'Classful Addressing - Class A', 
+    answer: '/8',
+  },
+  {
+    id: 5.21,
+    question: 'Classful Addressing - Class B',
+    answer: '/16',
+  },
+  {
+    id: 5.22,
+    question: 'Classful Addressing - Class C', 
+    answer: '/24',
+  },
+  {
+    id: 5.23,
+    question: 'Private Address Ranges', 
+    answer: 'Not routable over the internet: 10.0.0.0 to 10.255.255.255, 172.16.0.0 to 172.31.255.255, 192.168.0.0 to 192.168.255.255',
+  },
+  {
+    id: 5.24,
+    question: 'NAT', 
+    answer: 'Network Address Translation',
+  },
+  {
+    id: 5.25,
+    question: 'APIPA', 
+    answer: 'Automatic Private IP Addressing. 169.254.0.0 to 169.254.255.255',
+  },
+  {
+    id: 5.26,
+    question: 'Classful Addressing - Class D Multicast and Class E',
+    answer: 'Class D: 224.0.0.0 to 239.255.255.255. Class E (experimental) 240.0.0.0 to 255.255.255.255',
+  },
+  {
+    id: 5.27,
+    question: 'Loopback Range', 
     answer: '',
+  },
+  {
+    id: 5.28,
+    question: 'Classful Addressing - Address Unknown', 
+    answer: '0.0.0.0/8',
+  },
+  {
+    id: 5.29,
+    question: 'Sunnys Subnet Table video link', 
+    answer: 'https://www.youtube.com/watch?v=ecCuyq-Wprc',
   },
 ]
 const six = [
