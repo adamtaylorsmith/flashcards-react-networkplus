@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './app.css'
+import '../styles/index.css'
 import LessonOne from './components/LessonOne'
 import LessonTwo from './components/LessonTwo'
 import LessonThree from './components/LessonThree'
