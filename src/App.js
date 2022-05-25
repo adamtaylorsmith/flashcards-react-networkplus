@@ -90,12 +90,12 @@ const one = [
   {
     id: 1.06,
     question: 'Encapsulation',
-    answer: '',
+    answer: 'The sender adds various functionality and features to the data transmission, including security and reliability. OSI Model top down',
   },
   {
     id: 1.07,
     question: 'De-encapsulation',
-    answer: '',
+    answer: 'The receiver removes information from the package in order to obtain the original payload. OSI Model bottom up',
   },
   {
     id: 1.08,
@@ -412,7 +412,7 @@ const three = [
   {
     id: 3.13,
     question: 'tcpdump',
-    answer: '',
+    answer: 'A command line packet analyzer',
   },
   {
     id: 3.14,
@@ -1263,7 +1263,7 @@ const nine = [
   {
     id: 9.03,
     question: 'Graceful Teardown',
-    answer: '',
+    answer: 'Client sends FIN and enters FIN-WAIT1. Server responds with ACK and enters CLOSE-WAIT. Client receives ACK and enters FIN-WAIT2. Server sends FIN to client and goes to LAST-ACK. Client responds with ACK and enters TIME-WAIT. After a defined period client closes. Server closes when it receives ACK from client',
   },
   {
     id: 9.04,
@@ -1469,7 +1469,7 @@ const nine = [
 const ten = [
   {
     id: 10.00,
-    question: 'LESSON 10 - More Transport Layer Protocols',
+    question: 'LESSON 10 - Explaining Network Services',
   },
 ]
 const eleven = [
