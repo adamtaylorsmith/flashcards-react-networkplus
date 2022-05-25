@@ -47,7 +47,7 @@ function App() {
           <option value="seven">Lesson 7 - Routers</option>
           <option value="eight">Lesson 8 - Network Topologies</option>
           <option value="nine">Lesson 9 - Transport Layer</option>
-          <option value="ten">Lesson 10 - Transport Layer Part 2</option>
+          <option value="ten">Lesson 10 - Explaining Network Services</option>
           <option value="eleven">Lesson 11 - Network Applications</option>
         </select>
       </form>
