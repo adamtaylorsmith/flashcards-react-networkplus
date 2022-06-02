@@ -11,6 +11,8 @@ import LessonEight from './components/LessonEight'
 import LessonNine from './components/LessonNine'
 import LessonTen from './components/LessonTen'
 import LessonEleven from './components/LessonEleven'
+import LessonTwelve from './components/LessonTwelve'
+import LessThirteen from './components/LessonThirteen'
 
 function App() {
 
@@ -28,6 +30,8 @@ function App() {
     'nine': <LessonNine flashcards={nine} />,
     'ten': <LessonTen flashcards={ten} />,
     'eleven': <LessonEleven flashcards={eleven} />,
+    'twelve': <LessonTwelve flashcards={twelve} />,
+    'thirteen': <LessThirteen flashcards={thirteen} />,
   }
 
   return (
@@ -49,6 +53,8 @@ function App() {
           <option value="nine">Lesson 9 - Transport Layer</option>
           <option value="ten">Lesson 10 - Explaining Network Services</option>
           <option value="eleven">Lesson 11 - Network Applications</option>
+          <option value="twelve">Lesson 12 - Network Availability</option>
+          <option value="thirteen">Lesson 13 - Common Security Concepts</option>
         </select>
       </form>
       <hr/>
@@ -1621,7 +1627,13 @@ const eleven = [
 const twelve = [
   {
     id: 12.00,
-    question: 'LESSON 12 - Network ',
+    question: 'LESSON 12 - Network Availability',
+  },
+]
+const thirteen = [
+  {
+    id: 13.00,
+    question: 'LESSON 13 - Common Security Concepts ',
   },
 ]
 
