@@ -1471,11 +1471,157 @@ const ten = [
     id: 10.00,
     question: 'LESSON 10 - Explaining Network Services',
   },
+  {
+    id: 10.01,
+    question: 'Dynamic Host Configuration Protocol - 4 Steps',
+    answer: '1. Discover / 2. Offer / 3. Request / 4. Acknowledge. Ports 67 and 68. All communications Broadcast 255.255.255.255',
+  },
+  {
+    id: 10.02,
+    question: 'DHCP Server Configuration',
+    answer: 'Statically Assigned IP and Scope are mandatory. UDP/546 client. UDP/547 server',
+  },
+  {
+    id: 10.03,
+    question: 'DHCP Scope',
+    answer: 'Range of IP addresses available to lease for clients on a particular subnet',
+  },
+  {
+    id: 10.04,
+    question: 'Lease',
+    answer: 'Long lease reduces DHCP server traffic but risks address pool exhaustion. T1 and T2 timers (usually at 50% and 87.5%',
+  },
+  {
+    id: 10.05,
+    question: 'DHCP Relay Agent',
+    answer: 'RFC 1542 compliant. Forwards broadcasts to specified interface for a DHCP server. Forwards responses from server back to appropriate client subnet',
+  },
+  {
+    id: 10.06,
+    question: 'IP Helper',
+    answer: 'Can forward various types of broadcast traffic (not just DHCP). Cisco command supporting operation of DHCP relay',
+  },
+  {
+    id: 10.07,
+    question: 'Stateless',
+    answer: 'Host obtains presence, prefix and options from Router Advertisement (RA)',
+  },
+  {
+    id: 10.08,
+    question: 'Stateful',
+    answer: 'DHCPv6 server provides routable IPv6 address',
+  },
+  {
+    id: 10.09,
+    question: 'FQDN',
+    answer: 'Fully Qualified Domain Name. Host name + domain suffix',
+  },
+  {
+    id: 10.10,
+    question: 'Domain Suffix',
+    answer: 'Domain name + Top Level Domain (TLD - managed by ICANN)',
+  },
+  {
+    id: 10.11,
+    question: 'Naming Rules',
+    answer: 'Host name must be unique within domain. Labels separated by periods. 253 characters maximum length. 63 characters maximum length per label',
+  },
+  {
+    id: 10.12,
+    question: 'DNS',
+    answer: 'Domain Name System. Hierarchical distributed database of name resource records. Root domain just 13 servers worldwide',
+  },
+  {
+    id: 10.13,
+    question: 'Example: laptop.account.widget.com',
+    answer: '"laptop" is host name / "account" is sub-domain / "widget" is domain name / "com" is top level domain (TLD)',
+  },
+  {
+    id: 10.14,
+    question: 'Start of Authority - SOA',
+    answer: 'Primary DNS server that is authoritative for the zone',
+  },
+  {
+    id: 10.15,
+    question: 'Name Server - NS',
+    answer: 'Two or more NS records are configured for redundancy. Primary (editable) versus Secondary (read-only)',
+  },
+  {
+    id: 10.16,
+    question: 'Host A',
+    answer: 'IPv4',
+  },
+  {
+    id: 10.17,
+    question: 'Host AAAA',
+    answer: 'IPv6',
+  },
+  {
+    id: 10.18,
+    question: 'CNAME',
+    answer: 'Alternative name (alias) for a particular record',
+  },
+  {
+    id: 10.19,
+    question: 'Iterative Query and Response',
+    answer: '1. Root name server / 2. TLD name server / 3. Authoritative name server / 4. Local name server / 5. Added to network cache',
+  },
+  {
+    id: 10.20,
+    question: 'Recursive Query and Response',
+    answer: 'The Iterative Query steps, but completely automatic',
+  },
+  {
+    id: 10.21,
+    question: 'MX',
+    answer: 'Mail Exchange. Identifies a host record that functions as an email server for the domain. Servers distinguished by priority value',
+  },
+  {
+    id: 10.22,
+    question: 'TXT',
+    answer: 'Stores free-form text that may be needed to support other network services. Sender Policy Framework (SPF) and DomainKeys Identified Email (DKIM) help protect from spam',
+  },
+  {
+    id: 10.23,
+    question: 'Pointer - PTR',
+    answer: 'Forward or reverse lookup. Resolves an IP address to a domain name',
+  },
+  {
+    id: 10.24,
+    question: 'DNS Server Zones',
+    answer: 'Primary - privileged access and editable. Secondary - read only. Cache-only - your history',
+  },
+  {
+    id: 10.25,
+    question: 'Internal DNS Zone',
+    answer: '',
+  },
+  {
+    id: 10.26,
+    question: 'External DNS Zone',
+    answer: '',
+  },
+  {
+    id: 10.27,
+    question: 'nslookup',
+    answer: '',
+  },
+  {
+    id: 10.28,
+    question: 'dig',
+    answer: '',
+  },
 ]
 const eleven = [
   {
     id: 11.00,
     question: 'LESSON 11 - Network Applications',
+  },
+]
+const twelve = [
+  {
+    id: 12.00,
+    question: 'LESSON 12 - Network ',
   },
 ]
 
