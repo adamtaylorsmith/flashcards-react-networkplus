@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css'
+import Ports from './components/Ports'
 import LessonOne from './components/LessonOne'
 import LessonTwo from './components/LessonTwo'
 import LessonThree from './components/LessonThree'
@@ -19,6 +20,7 @@ function App() {
   const [flashcards, setFlashcards] = useState('')
 
   const myComponents = {
+    'ports': <Ports flashcards={ports} />,
     'one': <LessonOne flashcards={one} />,
     'two': <LessonTwo flashcards={two} />,
     'three': <LessonThree flashcards={three} />,
@@ -42,6 +44,7 @@ function App() {
       <form className='flex justify-center my-6'>
         <select className='text-lg' onChange={(e) => setFlashcards(e.target.value)}>
           <option>Select Lesson to Review</option>
+          <option value="ports">Ports</option>
           <option value="one">Lesson 1 - OSI Model</option>
           <option value="two">Lesson 2 - Ethernet Cabling</option>
           <option value="three">Lesson 3 - Ethernet Switching</option>
@@ -63,6 +66,193 @@ function App() {
   );
 }
 
+const ports = [
+  {
+    id: 0.01,
+    question: '20',
+    answer: 'FTP Data / TCP',
+  },
+  {
+    id: 0.02,
+    question: '21',
+    answer: 'FTP Control / TCP',
+  },
+  {
+    id: 0.03,
+    question: '22',
+    answer: 'SSH SFTP / TCP',
+  },
+  {
+    id: 0.04,
+    question: '23',
+    answer: 'Telnet / TCP',
+  },
+  {
+    id: 0.05,
+    question: '25',
+    answer: 'SMTP / TCP',
+  },
+  {
+    id: 0.06,
+    question: '49',
+    answer: 'TACACS+ / TCP',
+  },
+  {
+    id: 0.07,
+    question: '67',
+    answer: 'BOOTP DHCP Server / UDP',
+  },
+  {
+    id: 0.08,
+    question: '68',
+    answer: 'BOOTP DHCP Client / UDP',
+  },
+  {
+    id: 0.09,
+    question: '69',
+    answer: 'TFTP / UDP',
+  },
+  {
+    id: 0.10,
+    question: '80',
+    answer: 'HTTP / TCP',
+  },
+  {
+    id: 0.11,
+    question: '110',
+    answer: 'POP / TCP',
+  },
+  {
+    id: 0.12,
+    question: '123',
+    answer: 'NTP SNTP / UDP',
+  },
+  {
+    id: 0.13,
+    question: '143',
+    answer: 'IMAP / TCP',
+  },
+  {
+    id: 0.14,
+    question: '161',
+    answer: 'SNMP / UDP',
+  },
+  {
+    id: 0.15,
+    question: '162',
+    answer: 'SNMP Trap / UDP',
+  },
+  {
+    id: 0.16,
+    question: '389',
+    answer: 'LDAP / TCP UDP',
+  },
+  {
+    id: 0.17,
+    question: '443',
+    answer: 'HTTPS / TCP',
+  },
+  {
+    id: 0.18,
+    question: '445',
+    answer: 'SMB / TCP',
+  },
+  {
+    id: 0.19,
+    question: '514',
+    answer: 'Syslog / UDP',
+  },
+  {
+    id: 0.20,
+    question: '546',
+    answer: 'DHCPv6 Client / UDP',
+  },
+  {
+    id: 0.21,
+    question: '547',
+    answer: 'DHCPv6 Server / TCP',
+  },
+  {
+    id: 0.22,
+    question: '587',
+    answer: 'SMTPS / TCP',
+  },
+  {
+    id: 0.23,
+    question: '636',
+    answer: 'LDAPS / TCP',
+  },
+  {
+    id: 0.235,
+    question: '993',
+    answer: 'IMAPS / TCP',
+  },
+  {
+    id: 0.24,
+    question: '995',
+    answer: 'POP3S / TCP',
+  },
+  {
+    id: 0.25,
+    question: '1433',
+    answer: 'MS SQL Server / TCP',
+  },
+  {
+    id: 0.26,
+    question: '1521',
+    answer: 'SQL Net / TCP',
+  },
+  {
+    id: 0.27,
+    question: '1645',
+    answer: 'RADIUS Authentication / UDP',
+  },
+  {
+    id: 0.28,
+    question: '1646',
+    answer: 'RADIUS Accounting / UDP',
+  },
+  {
+    id: 0.29,
+    question: '1812',
+    answer: 'RADIUS Authentication / UDP',
+  },
+  {
+    id: 0.30,
+    question: '1813',
+    answer: 'RADIUS Accounting / UDP',
+  },
+  {
+    id: 0.31,
+    question: '3306',
+    answer: 'MySQL / TCP',
+  },
+  {
+    id: 0.32,
+    question: '3389',
+    answer: 'RDP / TCP',
+  },
+  {
+    id: 0.33,
+    question: '5004',
+    answer: 'RTP / UDP',
+  },
+  {
+    id: 0.34,
+    question: '5005',
+    answer: 'RTCP / UDP',
+  },
+  {
+    id: 0.35,
+    question: '5060',
+    answer: 'SIP / TCP UDP',
+  },
+  {
+    id: 0.36,
+    question: '5061',
+    answer: 'SIPS / TCP UDP',
+  },
+]
 const one = [
   {
     id: 1.00,
